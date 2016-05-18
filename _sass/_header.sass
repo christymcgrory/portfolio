@@ -6,7 +6,6 @@ header
   background-repeat: no-repeat
   background-position: center
 
-
   .logo
     +size(10vw)
     max-width: 122px
@@ -24,11 +23,10 @@ header
       margin-top: 18px
       margin-left: 18px
       float: right
-
       color: rgba(255, 255, 255, 0.65)
       font:
         weight: 100
-        size: 6 vmin 
+        size: 6 vmin
         family: OpenSans-Italic
       text-transform: lowercase
 
@@ -60,3 +58,10 @@ header
     background-repeat: no-repeat
     background-position: center
     background-size: contain
+
+.slicknav_menu
+  display: none
+  $media: only screen
+  $breakpoint: 768px
+  @media #{$media} and (max-width: $breakpoint)
+    display: block
