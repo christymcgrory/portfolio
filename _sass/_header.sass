@@ -1,3 +1,8 @@
+// Global Variables //
+$media: only screen
+$breakpoint: 768px
+
+
 header
   height: 25vw
   min-height: 300px
@@ -15,7 +20,8 @@ header
     background-repeat: no-repeat
     float:left
     position: absolute
-
+    @media #{$media} and (max-width: $breakpoint)
+      +margin(-72px 0 0 18px)
   ul
     +pad(0px 50px 90px 0px)
     a
@@ -32,8 +38,11 @@ header
 
       &:hover
         color: rgba(255, 255, 255, 0.8)
+    @media #{$media} and (max-width: $breakpoint)
+      display: none
 
   h1
+    positon: absolute
     font:
       weight: 600
       size: 6vmin
@@ -61,7 +70,6 @@ header
 
 .slicknav_menu
   display: none
-  $media: only screen
-  $breakpoint: 768px
   @media #{$media} and (max-width: $breakpoint)
     display: block
+    +margin(0 0 90px 0)
