@@ -10,6 +10,9 @@ header
   background-image: url(../../assets/imgs/241H.jpg)
   background-repeat: no-repeat
   background-position: center
+  background-size: cover
+  display: inline-block
+  width: 100vw
 
   .logo
     +size(10vw)
@@ -21,9 +24,9 @@ header
     float:left
     position: absolute
     @media #{$media} and (max-width: $breakpoint)
-      +margin(-72px 0 0 18px)
+
   ul
-    +pad(0px 50px 90px 0px)
+    +pad(0px 50px 0px 0px)
     a
       display: inline-block
       margin-top: 18px
@@ -54,6 +57,8 @@ header
     background-repeat: no-repeat
     background-position: center
     background-size: contain
+    +margin(90px 0 0 0)
+
 
   p
     font:
@@ -69,6 +74,9 @@ header
     background-size: contain
 
 .slicknav_menu
+  position: fixed
+  width: 100vw
+  float: right
   display: none
   @media #{$media} and (max-width: $breakpoint)
     display: block
